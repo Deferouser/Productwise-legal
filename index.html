@@ -7,13 +7,51 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .legal-content h3 { @apply text-xl font-bold text-slate-900 mt-10 mb-4 border-l-4 border-blue-600 pl-4 bg-slate-50 py-1; }
-        .legal-content h4 { @apply text-lg font-semibold text-slate-800 mt-6 mb-2; }
-        .legal-content p { @apply text-slate-600 leading-relaxed mb-4; }
-        .legal-content ul { @apply list-disc pl-8 space-y-2 mb-6 text-slate-600; }
-        .legal-content strong { @apply text-slate-900 font-semibold; }
-        .legal-content li { @apply leading-relaxed; }
+        body { 
+            font-family: 'Calibri', 'Segoe UI', sans-serif; 
+            scroll-behavior: smooth; 
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        .legal-content {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .legal-content > p:first-of-type {
+            @apply text-base text-slate-700 mb-8;
+        }
+        
+        .legal-content h3 { 
+            @apply text-lg font-bold text-slate-900 mt-8 mb-3;
+            font-weight: 700;
+        }
+        
+        .legal-content h4 { 
+            @apply text-base font-bold text-slate-900 mt-6 mb-3;
+            font-weight: 700;
+        }
+        
+        .legal-content p { 
+            @apply text-slate-700 leading-relaxed mb-4;
+        }
+        
+        .legal-content ul { 
+            @apply list-disc pl-8 space-y-2 mb-6 text-slate-700;
+        }
+        
+        .legal-content li { 
+            @apply leading-relaxed mb-2;
+        }
+        
+        .legal-content strong { 
+            @apply text-slate-900 font-bold;
+        }
+        
+        .legal-content section {
+            @apply pb-2;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -56,8 +94,8 @@
         <div class="lg:col-span-3 space-y-16">
             
             <!-- SECTION 1: PRIVACY POLICY -->
-            <section id="privacy" class="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12 legal-content">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Privacy Policy</h2>
+            <section id="privacy" class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 md:p-10 legal-content">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Privacy Policy</h2>
                 
                 <p>ProductWise (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains the types of information we collect, how we use it, and the choices you have. By using our mobile application, website, or related services (collectively, the “Service”), you agree to this Privacy Policy.</p>
 
@@ -105,43 +143,276 @@
 
                 <h3>7. Your Rights</h3>
                 <p>Depending on applicable law (including Jamaica’s Data Protection Act), you may have the right to access, correct, or delete your data. To exercise these rights, contact us at <strong>support@deferojamaica.com</strong>.</p>
-            </section>
+                <h3>8. Security</h3>
+                <p>We use reasonable technical and organizational safeguards (such as encryption and limited access controls) to protect your personal information, including location data and submitted photos. However, no system is completely secure, and we cannot guarantee absolute security. You are responsible for maintaining the confidentiality of your account credentials.</p>
+
+                <h3>9. Children's Privacy</h3>
+                <p>The Service is not intended for children under 18. We do not knowingly collect personal information from individuals under this age. If we learn we have inadvertently collected such information, we will delete it.</p>
+
+                <h3>10. International Users</h3>
+                <p>Although the Service is operated from Jamaica, data may be stored or processed in other jurisdictions by our service providers. By using the Service, you consent to such transfers, which will be done in compliance with applicable data protection laws.</p>
+
+                <h3>11. Changes to This Policy</h3>
+                <p>We may update this Privacy Policy from time to time. Any material changes will be posted in the app or on our website, with an updated "Last Updated" date. Your continued use of the Service indicates acceptance of the revised policy.</p>
+
+                <h3>12. Contact Us</h3>
+                <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+                <p><strong>Email:</strong> info@deferojamaica.com</p>
+                <p><strong>Phone:</strong> +1 876-631-7096</p>
+                <p><strong>Support Email:</strong> support@deferojamaica.com</p>            </section>
 
             <!-- SECTION 2: TERMS OF SERVICE -->
-            <section id="terms" class="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12 legal-content">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Terms of Service</h2>
+            <section id="terms" class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 md:p-10 legal-content">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Terms of Service</h2>
                 
-                <p>ProductWise is a deal focused app that allows users to find and compare prices and deals across various different stores or services in Jamaica. By creating an account or using the Service, you agree to these Terms.</p>
+                <p>ProductWise ("we," "our," or "us" as the context requires) is a deal focused app that allows users to find and compare prices and deals across various different stores or services in Jamaica. These Terms of Service ("Terms") govern your access to and use of our mobile application, website, and related services (collectively, the "Service"). By creating an account or using the Service, you agree to these Terms. If you do not agree, please do not use the Service.</p>
 
-                <h3>1. Eligibility & Registration</h3>
-                <p>You must be at least 18 years old to use the Service. You are responsible for maintaining the confidentiality of your login credentials and ensuring that all provided information is accurate.</p>
+                <h3>1. Eligibility</h3>
+                <ul>
+                    <li>You must be at least 18 years old, or the age of legal majority in your country, to use the Service.</li>
+                    <li>By registering, you represent that the information you provide is accurate and complete.</li>
+                </ul>
 
-                <h3>2. Content Warranties</h3>
+                <h3>2. Account Registration</h3>
+                <ul>
+                    <li>To use certain features, you must create an account with a valid email, username, password, and contact number.</li>
+                    <li>You are responsible for maintaining the confidentiality of your login credentials.</li>
+                    <li>You agree to notify us immediately of any unauthorized use of your account.</li>
+                </ul>
+
+                <h3>3. Content Warranties</h3>
                 <h4>a. User-Generated Content</h4>
-                <p>Users may submit information about product prices, deals, and promotions. By submitting User Content, you grant us a worldwide, royalty-free, non-exclusive license to use, display, and distribute that content.</p>
-                <h4>b. Accuracy Disclaimer</h4>
-                <p>Prices and deals are subject to change by merchants. We do not verify or guarantee the accuracy of User Content. Reliance on User Content is at your own risk.</p>
+                <ul>
+                    <li>Users may submit information about product prices, deals, and promotions ("User Content").</li>
+                    <li>By submitting User Content, you grant us a worldwide, royalty-free, non-exclusive license to use, display, modify, and distribute that content for the purpose of operating and improving the Service.</li>
+                </ul>
 
-                <h3>3. Camera & Photo Permissions</h3>
-                <p>By submitting photos, you warrant that you own or have permission to share them and understand that they may be publicly visible within the app.</p>
+                <h4>b. Your Representations & Warranties</h4>
+                <p>You represent and warrant that:</p>
+                <ul>
+                    <li>The User Content you submit is truthful, accurate, and current.</li>
+                    <li>Prices and promotional information are correct at the time of submission.</li>
+                    <li>You have the right to submit the User Content (including photos) and that it does not infringe the intellectual property or other rights of third parties.</li>
+                    <li>The User Content does not contain false, misleading, fraudulent, or defamatory information.</li>
+                    <li>You own or have permission to share any photos submitted through the Service.</li>
+                </ul>
 
-                <h3>4. Acceptable Use</h3>
-                <p>You agree not to post false pricing, content that violates intellectual property, or sexually explicit/hateful material. You may not reverse-engineer or scrape the Service for data.</p>
+                <h4>c. Accuracy & Liability Disclaimer</h4>
+                <p>You acknowledge that:</p>
+                <ul>
+                    <li>Prices and deals are subject to change at any time by merchants.</li>
+                    <li>We do not verify or guarantee the accuracy of User Content.</li>
+                    <li>We are not responsible for errors, omissions, or outdated information in User Content.</li>
+                    <li>Reliance on User Content is at your own risk.</li>
+                    <li>We are not liable for any losses or damages resulting from inaccurate, misleading, or fraudulent User Content.</li>
+                </ul>
 
-                <h3>5. Fees & Payments</h3>
-                <h4>a. Free vs Paid Service</h4>
-                <p>The Service offers a free base tier (with ads). We also offer optional paid subscriptions for premium features. All subscription pricing and cycles will be clearly displayed before purchase.</p>
-                <h4>b. No Refund Policy</h4>
-                <p>All purchases are final and non-refundable. This includes subscriptions, paid products, and one-time purchases. No refunds for partial billing periods or unused subscription time.</p>
+                <h4>d. Content Moderation & Removal</h4>
+                <p>We reserve the right to remove, modify, or refuse to publish any User Content that:</p>
+                <ul>
+                    <li>Violates these Terms of Service or our Privacy Policy.</li>
+                    <li>Contains false, misleading, fraudulent, or defamatory information.</li>
+                    <li>Infringes third-party intellectual property rights.</li>
+                    <li>Includes explicit, hateful, abusive, or otherwise inappropriate material.</li>
+                    <li>Violates applicable laws.</li>
+                </ul>
+                <p>We are not obligated to notify you before removing content, and removal does not constitute a waiver of any other rights or remedies.</p>
 
-                <h3>6. Governing Law & Dispute Resolution</h3>
-                <p>These Terms are governed by the <strong>laws of Jamaica</strong>. Any dispute, claim, or controversy shall be resolved through binding arbitration in Jamaica, conducted in accordance with the Arbitration Act of Jamaica.</p>
+                <h4>e. No Verification of Content</h4>
+                <ul>
+                    <li>We do not independently verify, audit, or confirm the accuracy of User Content before or after publication.</li>
+                    <li>We are not responsible for monitoring all submissions or catching inaccuracies.</li>
+                    <li>If you notice inaccurate or fraudulent content, you may report it to <strong>support@deferojamaica.com</strong>.</li>
+                </ul>
 
-                <h3>7. Contact Us</h3>
-                <div class="bg-slate-100 p-6 rounded-2xl border border-slate-200">
-                    <p class="mb-1 font-bold text-slate-900 underline">support@deferojamaica.com</p>
-                    <p class="mb-1 font-bold text-slate-900">Phone: +1 876-631-7096</p>
-                </div>
+                <h3>4. Camera & Photo Permissions</h3>
+                <p>Users may submit photos through our camera or photo library feature. By submitting photos, you:</p>
+                <ul>
+                    <li>Grant us the rights described above for the photos</li>
+                    <li>Warrant that you own or have permission to share the photos</li>
+                    <li>Understand that photos may be publicly visible.</li>
+                    <li>Release us from liability for how third parties may use visible photos</li>
+                    <li>You represent that the User Content you submit is truthful and does not infringe the rights of others.</li>
+                    <li>We reserve the right to remove or modify any User Content that violates these Terms or is otherwise inappropriate.</li>
+                </ul>
+
+                <h3>5. Location Data Usage</h3>
+                <p>You consent to our collection and use of location data to provide location-based recommendations. You may disable location services through device settings at any time. We are not responsible for the accuracy of location-based content or recommendations.</p>
+
+                <h3>6. Acceptable Use</h3>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Post false, misleading pricing/deal information.</li>
+                    <li>Post content that violates intellectual property rights of stores/brands.</li>
+                    <li>Submit sexually explicit, hateful, or defamatory content.</li>
+                    <li>Impersonate merchants or create fraudulent deals.</li>
+                    <li>Spam, flood, or abuse the submission system.</li>
+                    <li>Reverse-engineer or scrape the Service (for data/pricing).</li>
+                    <li>Use the Service for unlawful or harmful purposes.</li>
+                    <li>Interfere with the operation of the Service.</li>
+                    <li>Upload viruses, spam, or objectionable material.</li>
+                </ul>
+
+                <h3>7. Ownership & Intellectual Property</h3>
+                <ul>
+                    <li>All intellectual property rights in the Service (software, content, branding) are owned by us or our licensors.</li>
+                    <li>You are granted a limited, non-transferable, non-exclusive license to use the Service for personal, non-commercial purposes.</li>
+                    <li>You may not copy, modify, distribute, or create derivative works without our written consent.</li>
+                </ul>
+
+                <h3>8. Data & Privacy</h3>
+                <ul>
+                    <li>By using the Service, you agree that we may collect and use personal and usage data as described in our Privacy Policy.</li>
+                    <li>You acknowledge that User Content and activity data may be aggregated and shared with third parties in anonymized form.</li>
+                </ul>
+
+                <h3>9. Third-Party Services & Disclaimers</h3>
+                <ul>
+                    <li>The Service and all content are provided "as is" and "as available."</li>
+                    <li>User-Submitted Content Accuracy: We do not verify the accuracy of user-submitted prices, promotions, or product information. Users submit content at their own risk. We are not liable for reliance on inaccurate or outdated User Content.</li>
+                    <li>We make no guarantees about the accuracy of prices, promotions, or user-submitted content.</li>
+                    <li>We do not guarantee uninterrupted access to the Service. We may conduct maintenance, updates, or suspend services without notice.</li>
+                    <li>We are not liable for any downtime or loss of access to the Service.</li>
+                </ul>
+                <p><strong>Third-Party Information:</strong> We are not responsible for:</p>
+                <ul>
+                    <li>The accuracy, completeness, or timeliness of pricing or deal information from third-party stores or services.</li>
+                    <li>Changes to prices, promotions, or availability after information is posted.</li>
+                    <li>The quality, legality, or safety of products/services from third parties.</li>
+                    <li>Any transactions between you and third-party merchants.</li>
+                    <li>Third-party websites or services linked through our Service.</li>
+                </ul>
+
+                <h3>10. Fees & Payments</h3>
+                <h4>a. Free Base Service</h4>
+                <ul>
+                    <li>The Service offers a free base tier that allows you to browse, search, and submit deal information without charge.</li>
+                    <li>The free tier may include advertisements and promotional content.</li>
+                </ul>
+
+                <h4>b. Paid Subscriptions & Premium Features</h4>
+                <ul>
+                    <li>We offer optional paid subscription plans that provide enhanced features, ad-free browsing, exclusive deals, and premium functionality.</li>
+                    <li>Subscription pricing, features, and billing cycles will be clearly displayed before you purchase.</li>
+                    <li>Your subscription will automatically renew at the end of each billing period unless you cancel in advance.</li>
+                    <li>You are responsible for reviewing subscription terms and pricing before purchase.</li>
+                </ul>
+
+                <h4>c. Paid Products</h4>
+                <ul>
+                    <li>In addition to subscriptions, we may offer one-time purchases of digital products, features, or services within the app.</li>
+                    <li>Pricing for paid products will be displayed at the time of purchase.</li>
+                    <li>Payment is due immediately upon purchase.</li>
+                </ul>
+
+                <h4>d. Billing & Payment Methods</h4>
+                <ul>
+                    <li>Payment for subscriptions and products will be charged to your designated payment method (credit card, debit card, digital wallet, or other methods we support).</li>
+                    <li>You are responsible for providing accurate billing information.</li>
+                    <li>You authorize us to charge your payment method for all purchases and renewals unless you cancel.</li>
+                    <li>All prices are exclusive of applicable taxes, which will be added at checkout where required by law.</li>
+                </ul>
+
+                <h4>e. Cancellation of Subscriptions</h4>
+                <ul>
+                    <li>You may cancel your subscription at any time through your account settings or by contacting us at <strong>support@deferojamaica.com</strong>.</li>
+                    <li>Cancellation takes effect at the end of your current billing period.</li>
+                    <li>Upon cancellation, you will lose access to premium features, but your account and free tier access will remain active.</li>
+                </ul>
+
+                <h4>f. No Refund Policy</h4>
+                <p><strong>All purchases are final and non-refundable.</strong> This includes subscriptions, paid products, and one-time purchases.</p>
+                <p>No refunds will be issued for:</p>
+                <ul>
+                    <li>Partial billing periods or unused subscription time.</li>
+                    <li>Canceled subscriptions (refunds are not available even if you cancel mid-cycle).</li>
+                    <li>Paid products or digital content that has been accessed or downloaded.</li>
+                    <li>Subscription renewals or charges you did not authorize in accordance with the terms of your subscription agreement</li>
+                    <li>Technical issues, service interruptions, or changes to Service features.</li>
+                </ul>
+
+                <h4>g. Exceptions to No Refund Policy</h4>
+                <p>Refunds may be issued at our sole discretion if:</p>
+                <ul>
+                    <li>You are charged multiple times for a single purchase due to a technical error.</li>
+                    <li>A payment is processed without your authorization.</li>
+                    <li>A charge violates applicable consumer protection laws.</li>
+                </ul>
+                <p>To request an exception, contact us at <strong>support@deferojamaica.com</strong> with proof of the duplicate or unauthorized charge. We will investigate and respond within 14 business days.</p>
+
+                <h4>h. Failed Payments & Account Suspension</h4>
+                <ul>
+                    <li>If a subscription payment fails, we will attempt to re-charge your payment method.</li>
+                    <li>If payment fails after multiple attempts, your subscription may be suspended or terminated.</li>
+                    <li>You are responsible for keeping your payment information current.</li>
+                    <li>We are not liable for service interruptions due to failed payments.</li>
+                </ul>
+
+                <h4>i. Price Changes</h4>
+                <ul>
+                    <li>We may adjust subscription pricing or add new paid features at any time.</li>
+                    <li>Price changes will be communicated to existing subscribers at least 30 days in advance.</li>
+                    <li>Continued use of the Service after a price increase constitutes acceptance of the new pricing.</li>
+                    <li>If you do not accept new pricing, you may cancel your subscription before the changes takes effect.</li>
+                </ul>
+
+                <h4>j. Ads & Promotional Content</h4>
+                <ul>
+                    <li>The free base tier and some paid tiers may include advertisements and promotional content.</li>
+                    <li>We are not responsible for the content, accuracy, or practices of advertisers.</li>
+                    <li>Your use of advertised products or services is subject to the terms and policies of the respective advertisers.</li>
+                </ul>
+
+                <h3>11. Limitation of Liability</h3>
+                <ul>
+                    <li>Our total liability for any claim arising from your use of the Service will not exceed the amount you have paid us, if any, in the past 6 months.</li>
+                    <li>To the fullest extent permitted by law, we are not liable for any indirect, incidental, consequential, or punitive damages, including loss of profits, data, or goodwill.</li>
+                </ul>
+
+                <h3>12. Indemnification</h3>
+                <p>You agree to indemnify, defend, and hold harmless ProductWise and its officers, directors, employees, and agents from any claims, damages, losses, or expenses (including legal fees) arising from:</p>
+                <ul>
+                    <li>Your use of the Service</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your User Content or submissions</li>
+                    <li>Your infringement of third-party rights</li>
+                </ul>
+
+                <h3>13. Termination</h3>
+                <ul>
+                    <li>We reserve the right to monitor, investigate, suspend or terminate your account without refund if you breach these terms or otherwise misuse the Service.</li>
+                    <li>You may delete your account at any time.</li>
+                </ul>
+
+                <h3>14. Governing Law & Dispute Resolution</h3>
+                <ul>
+                    <li>These Terms are governed by the <strong>laws of Jamaica</strong>, without regard to conflict of laws principles.</li>
+                    <li>Any dispute, claim, or controversy arising out of or relating to these Terms or your use of the Service shall be resolved through <strong>binding arbitration in Jamaica</strong>, conducted in accordance with the Arbitration Act of Jamaica (as amended).</li>
+                    <li>The arbitration shall be administered by a mutually agreed arbitral tribunal, and the decision shall be final and binding on both parties.</li>
+                    <li>You agree to waive any right to participate in a class action or jury trial.</li>
+                </ul>
+
+                <h3>15. Export Compliance</h3>
+                <p>The Service may be subject to export control laws. You agree not to use the Service in violation of any export restrictions.</p>
+
+                <h3>16. Changes to These Terms</h3>
+                <ul>
+                    <li>We may modify, suspend, or discontinue any features or functionality at any time without notice.</li>
+                    <li>We are not liable for any modifications or discontinuation of Service features.</li>
+                    <li>We may update these Terms from time to time. When we do, we will update the "Last Updated" date above.</li>
+                    <li>Continued use of the Service constitutes acceptance of the updated Terms.</li>
+                </ul>
+
+                <h3>17. Severability</h3>
+                <p>If any provision of these Terms is found to be invalid or unenforceable, that provision shall be modified to the minimum extent necessary to make it enforceable, or if not possible, severed. The remaining provisions shall remain in full force and effect.</p>
+
+                <h3>18. Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us regarding your use of the Service and supersede all prior agreements and understandings.</p>
+
+                <h3>19. Contact Us</h3>
+                <p>If you have questions about these Terms, you may contact us at:</p>
+                <p><strong>Email:</strong> support@deferojamaica.com</p>
+                <p><strong>Phone:</strong> +1 876-631-7096</p>
             </section>
 
         </div>
