@@ -1,247 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Center | ProductWise</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { 
-            font-family: 'Calibri', 'Segoe UI', sans-serif; 
-            scroll-behavior: smooth; 
-            line-height: 1.5;
-            color: #333;
-        }
-        
-        .legal-content {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        
-        .legal-content > p:first-of-type {
-            @apply text-base text-slate-700 mb-8;
-        }
-        
-        .legal-content h3 { 
-            @apply text-lg font-bold text-slate-900 mt-8 mb-3;
-            font-weight: 700;
-        }
-        
-        .legal-content h4 { 
-            @apply text-base font-bold text-slate-900 mt-6 mb-3;
-            font-weight: 700;
-        }
-        
-        .legal-content p { 
-            @apply text-slate-700 leading-relaxed mb-4;
-        }
-        
-        .legal-content ul { 
-            @apply list-disc pl-8 space-y-2 mb-6 text-slate-700;
-        }
-        
-        .legal-content li { 
-            @apply leading-relaxed mb-2;
-        }
-        
-        .legal-content strong { 
-            @apply text-slate-900 font-bold;
-        }
-        
-        .legal-content section {
-            @apply pb-2;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Center | ProductWise</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Legal Center - Privacy Policy and Terms of Service for ProductWise.">
+  <meta name="author" content="Defero Jamaica">
+  
+  <!-- CSS Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body>
 
-    <!-- Navigation -->
-    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-black text-2xl tracking-tighter text-blue-600 uppercase">ProductWise</span>
-            <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest text-slate-500">
-                <a href="#privacy" class="hover:text-blue-600 transition">Privacy Policy</a>
-                <a href="#terms" class="hover:text-blue-600 transition">Terms of Service</a>
-            </div>
-        </div>
-    </nav>
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
 
-    <!-- Page Header -->
-    <header class="bg-slate-900 text-white py-16">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Legal Center</h1>
-            <p class="mt-4 text-slate-400 text-lg">Last Updated: April 15, 2026</p>
-        </div>
-    </header>
+  <!-- Header Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top glass-card py-3 px-3 m-3">
+    <div class="container-fluid">
+      <a class="navbar-brand navbar-brand-custom" href="#">
+        <i class="bi bi-box-seam-fill"></i> ProductWise
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <span class="badge bg-secondary py-2 px-3 border border-light border-opacity-10">
+          <i class="bi bi-shield-check me-1"></i> Legal Center
+        </span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <i class="bi bi-sun"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-    <main class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-4 gap-12">
+  <!-- Main Portal Layout -->
+  <main class="container portal-container">
+    
+    <!-- Hero Header -->
+    <div class="row mb-4 text-center">
+      <div class="col-lg-8 mx-auto">
+        <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill uppercase tracking-wider mb-3">
+          <i class="bi bi-file-earmark-text-fill me-1"></i> Legal & Regulatory
+        </span>
+        <h1 class="display-4 fw-extrabold mb-3">Legal Center</h1>
+        <p class="text-hero-subtitle leading-relaxed">
+          Review our legal documents below. Switch between documents using the tabs.
+        </p>
+      </div>
+    </div>
+
+    <!-- Document Selector Tabs -->
+    <div class="doc-tabs-nav">
+      <button id="tabBtnPrivacy" class="doc-tab-btn active">
+        <i class="bi bi-shield-lock-fill"></i> Privacy Policy
+      </button>
+      <button id="tabBtnTerms" class="doc-tab-btn">
+        <i class="bi bi-file-earmark-ruled-fill"></i> Terms of Service
+      </button>
+    </div>
+
+    <!-- MAIN PORTAL WRAPPER -->
+    <div class="row justify-content-center">
+      <div class="col-xl-10">
         
-        <!-- Sidebar Navigation -->
-        <aside class="hidden lg:block">
-            <div class="sticky top-28 space-y-6">
-                <div>
-                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">On this page</h4>
-                    <nav class="flex flex-col space-y-3 text-sm font-medium text-slate-600 border-l border-slate-200">
-                        <a href="#privacy" class="pl-4 hover:text-blue-600 transition border-l-2 border-transparent hover:border-blue-600">Privacy Policy</a>
-                        <a href="#terms" class="pl-4 hover:text-blue-600 transition border-l-2 border-transparent hover:border-blue-600">Terms of Service</a>
-                    </nav>
-                </div>
+        <!-- PRIVACY POLICY CONTAINER -->
+        <div id="docPrivacy" class="glass-card p-4 p-md-5">
+          <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-light border-opacity-10">
+            <h2 class="h5 mb-0 text-primary"><i class="bi bi-shield-lock me-2"></i>Privacy Policy</h2>
+            <div id="privacyReadIndicator" class="small text-read-indicator">
+              <i class="bi bi-book me-1"></i> Scroll to read
             </div>
-        </aside>
+          </div>
+          
+          <div class="progress-bar-container">
+            <div id="privacyProgressFill" class="progress-bar-fill"></div>
+          </div>
 
-        <!-- Content Area -->
-        <div class="lg:col-span-3 space-y-16">
-            
-            <!-- SECTION 1: PRIVACY POLICY -->
-            <section id="privacy" class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 md:p-10 legal-content">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Privacy Policy</h2>
-                
-                <p>ProductWise (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains the types of information we collect, how we use it, and the choices you have. By using our mobile application, website, or related services (collectively, the “Service”), you agree to this Privacy Policy.</p>
+          <div class="row">
+            <!-- Sidebar TOC for Privacy -->
+            <div class="col-md-3 d-none d-md-block">
+              <nav id="privacyToc" class="h-100 flex-column align-items-stretch pe-3 border-end border-light border-opacity-10">
+                <nav class="nav nav-pills flex-column gap-1 doc-toc">
+                  <a class="toc-link active" href="#p-intro">Introduction</a>
+                  <a class="toc-link" href="#p-1">1. Information We Collect</a>
+                  <a class="toc-link" href="#p-2">2. How We Use</a>
+                  <a class="toc-link" href="#p-3">3. Location Data & Privacy</a>
+                  <a class="toc-link" href="#p-4">4. Camera & Photo</a>
+                  <a class="toc-link" href="#p-5">5. How We Share</a>
+                  <a class="toc-link" href="#p-6">6. Data Retention</a>
+                  <a class="toc-link" href="#p-7">7. Your Rights</a>
+                  <a class="toc-link" href="#p-8">8. Security</a>
+                  <a class="toc-link" href="#p-9">9. Children's Privacy</a>
+                  <a class="toc-link" href="#p-10">10. International Users</a>
+                  <a class="toc-link" href="#p-11">11. Changes to Policy</a>
+                  <a class="toc-link" href="#p-12">12. Contact Us</a>
+                </nav>
+              </nav>
+            </div>
 
-                <h3>1. Information We Collect</h3>
-                <h4>a. Information You Provide</h4>
-                <ul>
+            <!-- Scrollable Content Box for Privacy -->
+            <div class="col-md-9">
+              <div id="privacyContent" class="doc-content-box agreement-body pe-2" data-bs-spy="scroll" data-bs-target="#privacyToc" data-bs-smooth-scroll="true">
+                <section id="p-intro" class="doc-section">
+                  <p class="small text-agreement-title mb-3">PRIVACY POLICY</p>
+                  <p>ProductWise (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains the types of information we collect, how we use it, and the choices you have. By using our mobile application, website, or related services (collectively, the “Service”), you agree to this Privacy Policy.</p>
+                </section>
+
+                <section id="p-1" class="doc-section">
+                  <h3>1. Information We Collect</h3>
+                  <h4>a. Information You Provide</h4>
+                  <ul>
                     <li><strong>Account Information:</strong> Email address, username, password, and contact number when you register.</li>
                     <li><strong>User Content:</strong> Prices, promotions, and other submissions you voluntarily post on the app.</li>
                     <li><strong>Pictures:</strong> You may grant us permission to access your device's camera and photo library to submit user-generated images. We collect and store these pictures as part of your user submissions.</li>
-                </ul>
-                <h4>b. Information We Collect Automatically</h4>
-                <ul>
+                  </ul>
+                  <h4>b. Information We Collect Automatically</h4>
+                  <ul>
                     <li><strong>Usage Data:</strong> Items you view, track, or report with the app itself; frequency and patterns of app use.</li>
                     <li><strong>Device Information:</strong> Basic technical details such as device type, operating system, and app version.</li>
                     <li><strong>Log Data:</strong> Access times, and interactions with app features.</li>
                     <li><strong>Users Location:</strong> Location is collected automatically via GPS, IP address, or sensor data when the app is in use to provide location-based features and content recommendations.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>2. How We Use Your Information</h3>
-                <p>We use the information we collect to:</p>
-                <ul>
+                <section id="p-2" class="doc-section">
+                  <h3>2. How We Use Your Information</h3>
+                  <p>We use the information we collect to:</p>
+                  <ul>
                     <li>Provide and maintain your account and the core functionality of the Service.</li>
                     <li>Deliver location-based content recommendations tailored to your geographic area.</li>
                     <li>Improve, personalize, and optimize the app experience.</li>
                     <li>Process and display user-submitted pictures.</li>
                     <li>Analyze aggregate usage trends and monitor for fraud or technical issues.</li>
                     <li>Share aggregated, anonymized insights with third parties (e.g., retailers, partners).</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>3. Location Data & Privacy</h3>
-                <p>We collect location to suggest relevant local content and help you discover nearby products. You can adjust permissions at any time via device settings. Historical location data is <strong>automatically deleted after 180 days.</strong></p>
+                <section id="p-3" class="doc-section">
+                  <h3>3. Location Data & Privacy</h3>
+                  <p>We collect location to suggest relevant local content and help you discover nearby products. You can adjust permissions at any time via device settings. Historical location data is <strong>automatically deleted after 180 days.</strong></p>
+                </section>
 
-                <h3>4. Camera & Photo Submission Privacy</h3>
-                <p>We only access the camera or photo library when you actively initiate a submission. Submitted photos are stored securely; while you retain ownership, you grant us a license to display them as part of the Service.</p>
+                <section id="p-4" class="doc-section">
+                  <h3>4. Camera & Photo Submission Privacy</h3>
+                  <p>We only access the camera or photo library when you actively initiate a submission. Submitted photos are stored securely; while you retain ownership, you grant us a license to display them as part of the Service.</p>
+                </section>
 
-                <h3>5. How We Share Your Information</h3>
-                <p>We do not sell, rent, or trade your personal information. We may share information with service providers (hosting, analytics, security) or for legal reasons if required by law.</p>
+                <section id="p-5" class="doc-section">
+                  <h3>5. How We Share Your Information</h3>
+                  <p>We do not sell, rent, or trade your personal information. We may share information with service providers (hosting, analytics, security) or for legal reasons if required by law.</p>
+                </section>
 
-                <h3>6. Data Retention</h3>
-                <ul>
+                <section id="p-6" class="doc-section">
+                  <h3>6. Data Retention</h3>
+                  <ul>
                     <li><strong>Account Data:</strong> Retained for the duration of your account and for 180 Days after deletion.</li>
                     <li><strong>Location Data:</strong> Retained for 180 Days unless you request earlier deletion.</li>
                     <li><strong>Photos/User Content:</strong> Retained until you delete your account or request removal.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>7. Your Rights</h3>
-                <p>Depending on applicable law (including Jamaica’s Data Protection Act), you may have the right to access, correct, or delete your data. To exercise these rights, contact us at <strong>support@deferojamaica.com</strong>.</p>
-                <h3>8. Security</h3>
-                <p>We use reasonable technical and organizational safeguards (such as encryption and limited access controls) to protect your personal information, including location data and submitted photos. However, no system is completely secure, and we cannot guarantee absolute security. You are responsible for maintaining the confidentiality of your account credentials.</p>
+                <section id="p-7" class="doc-section">
+                  <h3>7. Your Rights</h3>
+                  <p>Depending on applicable law (including Jamaica’s Data Protection Act), you may have the right to access, correct, or delete your data. To exercise these rights, contact us at <strong>support@deferojamaica.com</strong>.</p>
+                </section>
 
-                <h3>9. Children's Privacy</h3>
-                <p>The Service is not intended for children under 18. We do not knowingly collect personal information from individuals under this age. If we learn we have inadvertently collected such information, we will delete it.</p>
+                <section id="p-8" class="doc-section">
+                  <h3>8. Security</h3>
+                  <p>We use reasonable technical and organizational safeguards (such as encryption and limited access controls) to protect your personal information, including location data and submitted photos. However, no system is completely secure, and we cannot guarantee absolute security. You are responsible for maintaining the confidentiality of your account credentials.</p>
+                </section>
 
-                <h3>10. International Users</h3>
-                <p>Although the Service is operated from Jamaica, data may be stored or processed in other jurisdictions by our service providers. By using the Service, you consent to such transfers, which will be done in compliance with applicable data protection laws.</p>
+                <section id="p-9" class="doc-section">
+                  <h3>9. Children's Privacy</h3>
+                  <p>The Service is not intended for children under 18. We do not knowingly collect personal information from individuals under this age. If we learn we have inadvertently collected such information, we will delete it.</p>
+                </section>
 
-                <h3>11. Changes to This Policy</h3>
-                <p>We may update this Privacy Policy from time to time. Any material changes will be posted in the app or on our website, with an updated "Last Updated" date. Your continued use of the Service indicates acceptance of the revised policy.</p>
+                <section id="p-10" class="doc-section">
+                  <h3>10. International Users</h3>
+                  <p>Although the Service is operated from Jamaica, data may be stored or processed in other jurisdictions by our service providers. By using the Service, you consent to such transfers, which will be done in compliance with applicable data protection laws.</p>
+                </section>
 
-                <h3>12. Contact Us</h3>
-                <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
-                <p><strong>Email:</strong> info@deferojamaica.com</p>
-                <p><strong>Phone:</strong> +1 876-631-7096</p>
-                <p><strong>Support Email:</strong> support@deferojamaica.com</p>            </section>
+                <section id="p-11" class="doc-section">
+                  <h3>11. Changes to This Policy</h3>
+                  <p>We may update this Privacy Policy from time to time. Any material changes will be posted in the app or on our website, with an updated "Last Updated" date. Your continued use of the Service indicates acceptance of the revised policy.</p>
+                </section>
 
-            <!-- SECTION 2: TERMS OF SERVICE -->
-            <section id="terms" class="bg-white rounded-lg shadow-sm border border-slate-200 p-8 md:p-10 legal-content">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Terms of Service</h2>
-                
-                <p>ProductWise ("we," "our," or "us" as the context requires) is a deal focused app that allows users to find and compare prices and deals across various different stores or services in Jamaica. These Terms of Service ("Terms") govern your access to and use of our mobile application, website, and related services (collectively, the "Service"). By creating an account or using the Service, you agree to these Terms. If you do not agree, please do not use the Service.</p>
+                <section id="p-12" class="doc-section">
+                  <h3>12. Contact Us</h3>
+                  <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+                  <p><strong>Email:</strong> info@deferojamaica.com</p>
+                  <p><strong>Phone:</strong> +1 876-631-7096</p>
+                  <p><strong>Support Email:</strong> support@deferojamaica.com</p>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <h3>1. Eligibility</h3>
-                <ul>
+        <!-- TERMS OF SERVICE CONTAINER -->
+        <div id="docTerms" class="glass-card p-4 p-md-5 d-none">
+          <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-light border-opacity-10">
+            <h2 class="h5 mb-0 text-primary"><i class="bi bi-file-earmark-ruled me-2"></i>Terms of Service</h2>
+            <div id="termsReadIndicator" class="small text-read-indicator">
+              <i class="bi bi-book me-1"></i> Scroll to read
+            </div>
+          </div>
+          
+          <div class="progress-bar-container">
+            <div id="termsProgressFill" class="progress-bar-fill"></div>
+          </div>
+
+          <div class="row">
+            <!-- Sidebar TOC for Terms -->
+            <div class="col-md-3 d-none d-md-block">
+              <nav id="termsToc" class="h-100 flex-column align-items-stretch pe-3 border-end border-light border-opacity-10">
+                <nav class="nav nav-pills flex-column gap-1 doc-toc">
+                  <a class="toc-link active" href="#t-intro">Introduction</a>
+                  <a class="toc-link" href="#t-1">1. Eligibility</a>
+                  <a class="toc-link" href="#t-2">2. Account Registration</a>
+                  <a class="toc-link" href="#t-3">3. Content Warranties</a>
+                  <a class="toc-link" href="#t-4">4. Camera & Photos</a>
+                  <a class="toc-link" href="#t-5">5. Location Data Usage</a>
+                  <a class="toc-link" href="#t-6">6. Acceptable Use</a>
+                  <a class="toc-link" href="#t-7">7. Ownership & IP</a>
+                  <a class="toc-link" href="#t-8">8. Data & Privacy</a>
+                  <a class="toc-link" href="#t-9">9. Third-Party Service</a>
+                  <a class="toc-link" href="#t-10">10. Fees & Payments</a>
+                  <a class="toc-link" href="#t-11">11. Limitation of Liability</a>
+                  <a class="toc-link" href="#t-12">12. Indemnification</a>
+                  <a class="toc-link" href="#t-13">13. Termination</a>
+                  <a class="toc-link" href="#t-14">14. Governing Law</a>
+                  <a class="toc-link" href="#t-15">15. Export Compliance</a>
+                  <a class="toc-link" href="#t-16">16. Changes to Terms</a>
+                  <a class="toc-link" href="#t-17">17. Severability</a>
+                  <a class="toc-link" href="#t-18">18. Entire Agreement</a>
+                  <a class="toc-link" href="#t-19">19. Contact Us</a>
+                </nav>
+              </nav>
+            </div>
+
+            <!-- Scrollable Content Box for Terms -->
+            <div class="col-md-9">
+              <div id="termsContent" class="doc-content-box agreement-body pe-2" data-bs-spy="scroll" data-bs-target="#termsToc" data-bs-smooth-scroll="true">
+                <section id="t-intro" class="doc-section">
+                  <p class="small text-agreement-title mb-3">TERMS OF SERVICE</p>
+                  <p>ProductWise ("we," "our," or "us" as the context requires) is a deal focused app that allows users to find and compare prices and deals across various different stores or services in Jamaica. These Terms of Service ("Terms") govern your access to and use of our mobile application, website, and related services (collectively, the "Service"). By creating an account or using the Service, you agree to these Terms. If you do not agree, please do not use the Service.</p>
+                </section>
+
+                <section id="t-1" class="doc-section">
+                  <h3>1. Eligibility</h3>
+                  <ul>
                     <li>You must be at least 18 years old, or the age of legal majority in your country, to use the Service.</li>
                     <li>By registering, you represent that the information you provide is accurate and complete.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>2. Account Registration</h3>
-                <ul>
+                <section id="t-2" class="doc-section">
+                  <h3>2. Account Registration</h3>
+                  <ul>
                     <li>To use certain features, you must create an account with a valid email, username, password, and contact number.</li>
                     <li>You are responsible for maintaining the confidentiality of your login credentials.</li>
                     <li>You agree to notify us immediately of any unauthorized use of your account.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>3. Content Warranties</h3>
-                <h4>a. User-Generated Content</h4>
-                <ul>
-                    <li>Users may submit information about product prices, deals, and promotions ("User Content").</li>
-                    <li>By submitting User Content, you grant us a worldwide, royalty-free, non-exclusive license to use, display, modify, and distribute that content for the purpose of operating and improving the Service.</li>
-                </ul>
-
-                <h4>b. Your Representations & Warranties</h4>
-                <p>You represent and warrant that:</p>
-                <ul>
+                <section id="t-3" class="doc-section">
+                  <h3>3. Content Warranties</h3>
+                  <h4>a. User-Generated Content</h4>
+                  <p>Users may submit information about product prices, deals, and promotions ("User Content"). By submitting User Content, you grant us a worldwide, royalty-free, non-exclusive license to use, display, modify, and distribute that content for the purpose of operating and improving the Service.</p>
+                  
+                  <h4>b. Your Representations & Warranties</h4>
+                  <p>You represent and warrant that:</p>
+                  <ul>
                     <li>The User Content you submit is truthful, accurate, and current.</li>
                     <li>Prices and promotional information are correct at the time of submission.</li>
                     <li>You have the right to submit the User Content (including photos) and that it does not infringe the intellectual property or other rights of third parties.</li>
                     <li>The User Content does not contain false, misleading, fraudulent, or defamatory information.</li>
                     <li>You own or have permission to share any photos submitted through the Service.</li>
-                </ul>
+                  </ul>
 
-                <h4>c. Accuracy & Liability Disclaimer</h4>
-                <p>You acknowledge that:</p>
-                <ul>
+                  <h4>c. Accuracy & Liability Disclaimer</h4>
+                  <p>You acknowledge that:</p>
+                  <ul>
                     <li>Prices and deals are subject to change at any time by merchants.</li>
                     <li>We do not verify or guarantee the accuracy of User Content.</li>
                     <li>We are not responsible for errors, omissions, or outdated information in User Content.</li>
                     <li>Reliance on User Content is at your own risk.</li>
                     <li>We are not liable for any losses or damages resulting from inaccurate, misleading, or fraudulent User Content.</li>
-                </ul>
+                  </ul>
 
-                <h4>d. Content Moderation & Removal</h4>
-                <p>We reserve the right to remove, modify, or refuse to publish any User Content that:</p>
-                <ul>
+                  <h4>d. Content Moderation & Removal</h4>
+                  <p>We reserve the right to remove, modify, or refuse to publish any User Content that:</p>
+                  <ul>
                     <li>Violates these Terms of Service or our Privacy Policy.</li>
                     <li>Contains false, misleading, fraudulent, or defamatory information.</li>
                     <li>Infringes third-party intellectual property rights.</li>
                     <li>Includes explicit, hateful, abusive, or otherwise inappropriate material.</li>
                     <li>Violates applicable laws.</li>
-                </ul>
-                <p>We are not obligated to notify you before removing content, and removal does not constitute a waiver of any other rights or remedies.</p>
+                  </ul>
+                  <p>We are not obligated to notify you before removing content, and removal does not constitute a waiver of any other rights or remedies.</p>
 
-                <h4>e. No Verification of Content</h4>
-                <ul>
+                  <h4>e. No Verification of Content</h4>
+                  <ul>
                     <li>We do not independently verify, audit, or confirm the accuracy of User Content before or after publication.</li>
                     <li>We are not responsible for monitoring all submissions or catching inaccuracies.</li>
                     <li>If you notice inaccurate or fraudulent content, you may report it to <strong>support@deferojamaica.com</strong>.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>4. Camera & Photo Permissions</h3>
-                <p>Users may submit photos through our camera or photo library feature. By submitting photos, you:</p>
-                <ul>
-                    <li>Grant us the rights described above for the photos</li>
-                    <li>Warrant that you own or have permission to share the photos</li>
+                <section id="t-4" class="doc-section">
+                  <h3>4. Camera & Photo Permissions</h3>
+                  <p>Users may submit photos through our camera or photo library feature. By submitting photos, you:</p>
+                  <ul>
+                    <li>Grant us the rights described above for the photos.</li>
+                    <li>Warrant that you own or have permission to share the photos.</li>
                     <li>Understand that photos may be publicly visible.</li>
-                    <li>Release us from liability for how third parties may use visible photos</li>
+                    <li>Release us from liability for how third parties may use visible photos.</li>
                     <li>You represent that the User Content you submit is truthful and does not infringe the rights of others.</li>
                     <li>We reserve the right to remove or modify any User Content that violates these Terms or is otherwise inappropriate.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>5. Location Data Usage</h3>
-                <p>You consent to our collection and use of location data to provide location-based recommendations. You may disable location services through device settings at any time. We are not responsible for the accuracy of location-based content or recommendations.</p>
+                <section id="t-5" class="doc-section">
+                  <h3>5. Location Data Usage</h3>
+                  <p>You consent to our collection and use of location data to provide location-based recommendations. You may disable location services through device settings at any time. We are not responsible for the accuracy of location-based content or recommendations.</p>
+                </section>
 
-                <h3>6. Acceptable Use</h3>
-                <p>You agree not to:</p>
-                <ul>
+                <section id="t-6" class="doc-section">
+                  <h3>6. Acceptable Use</h3>
+                  <p>You agree not to:</p>
+                  <ul>
                     <li>Post false, misleading pricing/deal information.</li>
                     <li>Post content that violates intellectual property rights of stores/brands.</li>
                     <li>Submit sexually explicit, hateful, or defamatory content.</li>
@@ -251,199 +342,233 @@
                     <li>Use the Service for unlawful or harmful purposes.</li>
                     <li>Interfere with the operation of the Service.</li>
                     <li>Upload viruses, spam, or objectionable material.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>7. Ownership & Intellectual Property</h3>
-                <ul>
+                <section id="t-7" class="doc-section">
+                  <h3>7. Ownership & Intellectual Property</h3>
+                  <ul>
                     <li>All intellectual property rights in the Service (software, content, branding) are owned by us or our licensors.</li>
                     <li>You are granted a limited, non-transferable, non-exclusive license to use the Service for personal, non-commercial purposes.</li>
                     <li>You may not copy, modify, distribute, or create derivative works without our written consent.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>8. Data & Privacy</h3>
-                <ul>
+                <section id="t-8" class="doc-section">
+                  <h3>8. Data & Privacy</h3>
+                  <ul>
                     <li>By using the Service, you agree that we may collect and use personal and usage data as described in our Privacy Policy.</li>
                     <li>You acknowledge that User Content and activity data may be aggregated and shared with third parties in anonymized form.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>9. Third-Party Services & Disclaimers</h3>
-                <ul>
+                <section id="t-9" class="doc-section">
+                  <h3>9. Third-Party Services & Disclaimers</h3>
+                  <ul>
                     <li>The Service and all content are provided "as is" and "as available."</li>
                     <li>User-Submitted Content Accuracy: We do not verify the accuracy of user-submitted prices, promotions, or product information. Users submit content at their own risk. We are not liable for reliance on inaccurate or outdated User Content.</li>
                     <li>We make no guarantees about the accuracy of prices, promotions, or user-submitted content.</li>
                     <li>We do not guarantee uninterrupted access to the Service. We may conduct maintenance, updates, or suspend services without notice.</li>
                     <li>We are not liable for any downtime or loss of access to the Service.</li>
-                </ul>
-                <p><strong>Third-Party Information:</strong> We are not responsible for:</p>
-                <ul>
+                  </ul>
+                  <p><strong>Third-Party Information:</strong> We are not responsible for:</p>
+                  <ul>
                     <li>The accuracy, completeness, or timeliness of pricing or deal information from third-party stores or services.</li>
                     <li>Changes to prices, promotions, or availability after information is posted.</li>
                     <li>The quality, legality, or safety of products/services from third parties.</li>
                     <li>Any transactions between you and third-party merchants.</li>
                     <li>Third-party websites or services linked through our Service.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>10. Fees & Payments</h3>
-                <h4>a. Free Base Service</h4>
-                <ul>
+                <section id="t-10" class="doc-section">
+                  <h3>10. Fees & Payments</h3>
+                  <h4>a. Free Base Service</h4>
+                  <ul>
                     <li>The Service offers a free base tier that allows you to browse, search, and submit deal information without charge.</li>
                     <li>The free tier may include advertisements and promotional content.</li>
-                </ul>
-
-                <h4>b. Paid Subscriptions & Premium Features</h4>
-                <ul>
+                  </ul>
+                  <h4>b. Paid Subscriptions & Premium Features</h4>
+                  <ul>
                     <li>We offer optional paid subscription plans that provide enhanced features, ad-free browsing, exclusive deals, and premium functionality.</li>
                     <li>Subscription pricing, features, and billing cycles will be clearly displayed before you purchase.</li>
                     <li>Your subscription will automatically renew at the end of each billing period unless you cancel in advance.</li>
                     <li>You are responsible for reviewing subscription terms and pricing before purchase.</li>
-                </ul>
-
-                <h4>c. Paid Products</h4>
-                <ul>
+                  </ul>
+                  <h4>c. Paid Products</h4>
+                  <ul>
                     <li>In addition to subscriptions, we may offer one-time purchases of digital products, features, or services within the app.</li>
                     <li>Pricing for paid products will be displayed at the time of purchase.</li>
                     <li>Payment is due immediately upon purchase.</li>
-                </ul>
-
-                <h4>d. Billing & Payment Methods</h4>
-                <ul>
+                  </ul>
+                  <h4>d. Billing & Payment Methods</h4>
+                  <ul>
                     <li>Payment for subscriptions and products will be charged to your designated payment method (credit card, debit card, digital wallet, or other methods we support).</li>
                     <li>You are responsible for providing accurate billing information.</li>
                     <li>You authorize us to charge your payment method for all purchases and renewals unless you cancel.</li>
                     <li>All prices are exclusive of applicable taxes, which will be added at checkout where required by law.</li>
-                </ul>
-
-                <h4>e. Cancellation of Subscriptions</h4>
-                <ul>
+                  </ul>
+                  <h4>e. Cancellation of Subscriptions</h4>
+                  <ul>
                     <li>You may cancel your subscription at any time through your account settings or by contacting us at <strong>support@deferojamaica.com</strong>.</li>
                     <li>Cancellation takes effect at the end of your current billing period.</li>
                     <li>Upon cancellation, you will lose access to premium features, but your account and free tier access will remain active.</li>
-                </ul>
-
-                <h4>f. No Refund Policy</h4>
-                <p><strong>All purchases are final and non-refundable.</strong> This includes subscriptions, paid products, and one-time purchases.</p>
-                <p>No refunds will be issued for:</p>
-                <ul>
+                  </ul>
+                  <h4>f. No Refund Policy</h4>
+                  <p><strong>All purchases are final and non-refundable.</strong> This includes subscriptions, paid products, and one-time purchases.</p>
+                  <p>No refunds will be issued for:</p>
+                  <ul>
                     <li>Partial billing periods or unused subscription time.</li>
                     <li>Canceled subscriptions (refunds are not available even if you cancel mid-cycle).</li>
                     <li>Paid products or digital content that has been accessed or downloaded.</li>
-                    <li>Subscription renewals or charges you did not authorize in accordance with the terms of your subscription agreement</li>
+                    <li>Subscription renewals or charges you did not authorize in accordance with the terms of your subscription agreement.</li>
                     <li>Technical issues, service interruptions, or changes to Service features.</li>
-                </ul>
-
-                <h4>g. Exceptions to No Refund Policy</h4>
-                <p>Refunds may be issued at our sole discretion if:</p>
-                <ul>
+                  </ul>
+                  <h4>g. Exceptions to No Refund Policy</h4>
+                  <p>Refunds may be issued at our sole discretion if:</p>
+                  <ul>
                     <li>You are charged multiple times for a single purchase due to a technical error.</li>
                     <li>A payment is processed without your authorization.</li>
                     <li>A charge violates applicable consumer protection laws.</li>
-                </ul>
-                <p>To request an exception, contact us at <strong>support@deferojamaica.com</strong> with proof of the duplicate or unauthorized charge. We will investigate and respond within 14 business days.</p>
-
-                <h4>h. Failed Payments & Account Suspension</h4>
-                <ul>
+                  </ul>
+                  <p>To request an exception, contact us at <strong>support@deferojamaica.com</strong> with proof of the duplicate or unauthorized charge. We will investigate and respond within 14 business days.</p>
+                  <h4>h. Failed Payments & Account Suspension</h4>
+                  <ul>
                     <li>If a subscription payment fails, we will attempt to re-charge your payment method.</li>
                     <li>If payment fails after multiple attempts, your subscription may be suspended or terminated.</li>
                     <li>You are responsible for keeping your payment information current.</li>
                     <li>We are not liable for service interruptions due to failed payments.</li>
-                </ul>
-
-                <h4>i. Price Changes</h4>
-                <ul>
+                  </ul>
+                  <h4>i. Price Changes</h4>
+                  <ul>
                     <li>We may adjust subscription pricing or add new paid features at any time.</li>
                     <li>Price changes will be communicated to existing subscribers at least 30 days in advance.</li>
                     <li>Continued use of the Service after a price increase constitutes acceptance of the new pricing.</li>
                     <li>If you do not accept new pricing, you may cancel your subscription before the changes takes effect.</li>
-                </ul>
-
-                <h4>j. Ads & Promotional Content</h4>
-                <ul>
+                  </ul>
+                  <h4>j. Ads & Promotional Content</h4>
+                  <ul>
                     <li>The free base tier and some paid tiers may include advertisements and promotional content.</li>
                     <li>We are not responsible for the content, accuracy, or practices of advertisers.</li>
                     <li>Your use of advertised products or services is subject to the terms and policies of the respective advertisers.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>11. Limitation of Liability</h3>
-                <ul>
+                <section id="t-11" class="doc-section">
+                  <h3>11. Limitation of Liability</h3>
+                  <ul>
                     <li>Our total liability for any claim arising from your use of the Service will not exceed the amount you have paid us, if any, in the past 6 months.</li>
                     <li>To the fullest extent permitted by law, we are not liable for any indirect, incidental, consequential, or punitive damages, including loss of profits, data, or goodwill.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>12. Indemnification</h3>
-                <p>You agree to indemnify, defend, and hold harmless ProductWise and its officers, directors, employees, and agents from any claims, damages, losses, or expenses (including legal fees) arising from:</p>
-                <ul>
+                <section id="t-12" class="doc-section">
+                  <h3>12. Indemnification</h3>
+                  <p>You agree to indemnify, defend, and hold harmless ProductWise and its officers, directors, employees, and agents from any claims, damages, losses, or expenses (including legal fees) arising from:</p>
+                  <ul>
                     <li>Your use of the Service</li>
                     <li>Your violation of these Terms</li>
                     <li>Your User Content or submissions</li>
                     <li>Your infringement of third-party rights</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>13. Termination</h3>
-                <ul>
+                <section id="t-13" class="doc-section">
+                  <h3>13. Termination</h3>
+                  <ul>
                     <li>We reserve the right to monitor, investigate, suspend or terminate your account without refund if you breach these terms or otherwise misuse the Service.</li>
                     <li>You may delete your account at any time.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>14. Governing Law & Dispute Resolution</h3>
-                <ul>
+                <section id="t-14" class="doc-section">
+                  <h3>14. Governing Law & Dispute Resolution</h3>
+                  <ul>
                     <li>These Terms are governed by the <strong>laws of Jamaica</strong>, without regard to conflict of laws principles.</li>
                     <li>Any dispute, claim, or controversy arising out of or relating to these Terms or your use of the Service shall be resolved through <strong>binding arbitration in Jamaica</strong>, conducted in accordance with the Arbitration Act of Jamaica (as amended).</li>
                     <li>The arbitration shall be administered by a mutually agreed arbitral tribunal, and the decision shall be final and binding on both parties.</li>
                     <li>You agree to waive any right to participate in a class action or jury trial.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>15. Export Compliance</h3>
-                <p>The Service may be subject to export control laws. You agree not to use the Service in violation of any export restrictions.</p>
+                <section id="t-15" class="doc-section">
+                  <h3>15. Export Compliance</h3>
+                  <p>The Service may be subject to export control laws. You agree not to use the Service in violation of any export restrictions.</p>
+                </section>
 
-                <h3>16. Changes to These Terms</h3>
-                <ul>
+                <section id="t-16" class="doc-section">
+                  <h3>16. Changes to These Terms</h3>
+                  <ul>
                     <li>We may modify, suspend, or discontinue any features or functionality at any time without notice.</li>
                     <li>We are not liable for any modifications or discontinuation of Service features.</li>
                     <li>We may update these Terms from time to time. When we do, we will update the "Last Updated" date above.</li>
                     <li>Continued use of the Service constitutes acceptance of the updated Terms.</li>
-                </ul>
+                  </ul>
+                </section>
 
-                <h3>17. Severability</h3>
-                <p>If any provision of these Terms is found to be invalid or unenforceable, that provision shall be modified to the minimum extent necessary to make it enforceable, or if not possible, severed. The remaining provisions shall remain in full force and effect.</p>
+                <section id="t-17" class="doc-section">
+                  <h3>17. Severability</h3>
+                  <p>If any provision of these Terms is found to be invalid or unenforceable, that provision shall be modified to the minimum extent necessary to make it enforceable, or if not possible, severed. The remaining provisions shall remain in full force and effect.</p>
+                </section>
 
-                <h3>18. Entire Agreement</h3>
-                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us regarding your use of the Service and supersede all prior agreements and understandings.</p>
+                <section id="t-18" class="doc-section">
+                  <h3>18. Entire Agreement</h3>
+                  <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us regarding your use of the Service and supersede all prior agreements and understandings.</p>
+                </section>
 
-                <h3>19. Contact Us</h3>
-                <p>If you have questions about these Terms, you may contact us at:</p>
-                <p><strong>Email:</strong> support@deferojamaica.com</p>
-                <p><strong>Phone:</strong> +1 876-631-7096</p>
-            </section>
-
-        </div>
-    </main>
-
-    <footer class="bg-slate-50 py-12 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <p class="text-slate-400 text-xs tracking-widest uppercase text-center md:text-left">&copy; 2026 ProductWise / Defero Jamaica. All rights reserved.</p>
-            <div class="flex items-center gap-4">
-                <span class="text-slate-400 text-[10px] tracking-widest uppercase font-bold">We Accept</span>
-                <div class="flex items-center gap-3">
-                    <!-- Visa Logo -->
-                    <div class="bg-white px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center justify-center h-8 w-12" title="Visa">
-                        <svg class="h-4 w-auto" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#1A1F71">
-                            <path d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/>
-                        </svg>
-                    </div>
-                    <!-- Mastercard Logo -->
-                    <div class="bg-white px-2 py-1 rounded border border-slate-200 shadow-sm flex items-center justify-center h-8 w-12" title="Mastercard">
-                        <svg class="h-5 w-auto" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
-                            <g fill-rule="evenodd">
-                                <circle cx="8" cy="8" r="8" fill="#EA001B"/>
-                                <circle cx="16" cy="8" r="8" fill="#F79E1B"/>
-                                <path d="M12 1.353a7.96 7.96 0 0 1 4 6.647 7.96 7.96 0 0 1-4 6.647 7.96 7.96 0 0 1-4-6.647 7.96 7.96 0 0 1 4-6.647z" fill="#FF5F00"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
+                <section id="t-19" class="doc-section">
+                  <h3>19. Contact Us</h3>
+                  <p>If you have questions about these Terms, you may contact us at:</p>
+                  <p><strong>Email:</strong> support@deferojamaica.com</p>
+                  <p><strong>Phone:</strong> +1 876-631-7096</p>
+                </section>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
 
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container d-flex flex-column md:flex-row align-items-center justify-content-between gap-3">
+      <div class="text-start">
+        <p class="mb-1">&copy; 2026 ProductWise / Defero Jamaica. All rights reserved.</p>
+        <p class="small text-muted mb-0 text-muted-opacity">
+          Governed by the laws of Jamaica. Under Jamaican Arbitration Act rules. ProductWise trademark belongs to Defero Limited.
+        </p>
+      </div>
+      
+      <!-- Payment Logos -->
+      <div class="d-flex align-items-center gap-3">
+        <span class="text-muted small uppercase font-bold">We Accept</span>
+        <div class="d-flex align-items-center gap-2">
+          <!-- Visa Logo -->
+          <div class="bg-white px-2 py-1 rounded border border-light border-opacity-10 shadow-sm flex items-center justify-center" style="height: 32px; width: 48px;" title="Visa">
+            <svg class="h-100 w-auto" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#1A1F71" style="max-height: 16px;">
+              <path d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/>
+            </svg>
+          </div>
+          <!-- Mastercard Logo -->
+          <div class="bg-white px-2 py-1 rounded border border-light border-opacity-10 shadow-sm flex items-center justify-center" style="height: 32px; width: 48px;" title="Mastercard">
+            <svg class="h-100 w-auto" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" style="max-height: 20px;">
+              <g fill-rule="evenodd">
+                <circle cx="8" cy="8" r="8" fill="#EA001B"/>
+                <circle cx="16" cy="8" r="8" fill="#F79E1B"/>
+                <path d="M12 1.353a7.96 7.96 0 0 1 4 6.647 7.96 7.96 0 0 1-4 6.647 7.96 7.96 0 0 1-4-6.647 7.96 7.96 0 0 1 4-6.647z" fill="#FF5F00"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
